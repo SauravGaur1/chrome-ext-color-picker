@@ -1,0 +1,1 @@
+console.log("this log is from service worker");

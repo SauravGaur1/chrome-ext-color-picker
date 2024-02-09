@@ -1,0 +1,25 @@
+{
+    "name" : "ColorPicker",
+    "description" : "This is a sample color picker extention",
+    "version" : "1.0",
+    "manifest_version" : 3,
+    "icons" : {
+        "16" : "src/images/pallate.png",
+        "32" : "src/images/pallate.png",
+        "48" : "src/images/pallate.png"
+    },
+    "permissions" : [
+        "notifications"
+    ],
+    "action" : {
+        "default_popup": "src/pages/main_model.html"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["src/scripts/askper.js"],
+        "all_frames": true
+    }],
+    "background" : {
+        "service_worker" : "src/scripts/service_worker.js"
+    }
+}

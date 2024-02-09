@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/main_model.css">
+    <script defer src="../scripts/main_model.js"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="topbar">
+            <img src="../images/pallate.png" alt="" srcset="">
+            <h3>Color Picker</h3>
+        </div>
+        <br>
+        <div class="colorPickerContainer">
+            <strong>Color Pallate : </strong>
+            <div class="sizedbox"></div>
+            <img class="centerAbsolute" src="../images/color-picker.png" alt="">
+            <input id="colorPickerInput" type="color">
+        </div>
+        <div class="results">
+            <div class="group">
+                <span id="colorResult" >#000000</span>
+                <img  id="copyButton" src="../images/copy.png" alt="">
+            </div>
+            <div class="group">
+                <span id="colorResultRGB" >rgb(0, 0, 0)</span>
+                <img  id="copyButtonRGB" src="../images/copy.png" alt="">
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="recentColors">
+            <span>Recent : </span>
+            <div id="colorList" class="colorList">No colors selected recently</div>
+        </div>
+        <div class="divider"></div>
+        <div class="testColorContainer">
+            <div class="splits">
+                <span>Test Color : </span>
+                <div class="sizedbox"></div>
+                <div id="testColorCode" class="testColor"></div>
+                <input id="testColorCodeInput" type="text" placeholder="Color | #hex-code | rgb(r,g,b)">
+            </div>
+            <div class="ver-divider"></div>
+            <div class="splits">
+                <span>Color Code Converter :</span>
+                <div class="converterRadioContainer">
+                    <label for="rgbtohexconverter">RGB to Hex</label>
+                    <input value="rgbtohex" id="rgbtohexconverter" type="radio" checked name="colorradio">
+                    <label for="hextorgbconverter">RGB to Hex</label>
+                    <input value="hextorgb" id="hextorgbconverter" type="radio" name="colorradio">
+                </div>
+                <div class="sizedbox"></div>
+                <input id="colorToBeConverted" type="text" placeholder="color code...">
+                <input id="convertColorButton" type="button" value="Convert">
+                <p class="convertedColor" id="convertedColor" ></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
